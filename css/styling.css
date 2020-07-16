@@ -18,36 +18,14 @@ p{
 
 }
 
-/* Video: 
-- set the video as background, make it fixed.
-- make sure it appears behind all elements.
-- make it spread across the whole webpage. */
-#bgvideo{
-    position:  fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    transform: translateX(calc((100% - 100vw) / 2));
-    z-index: -100;
-    
-}
 
 
-/* note !!
-Video won't work in small devices:
--Hide the video and set picture as background (use media queries)
--make it spread a cross the whole webpage*/
-@media (max-device-width:768px){
-    body{
+
+.homeBG{
         background: url(../images/homebackground.png) center center fixed no-repeat;
         background-size: cover;
         overflow-x: hidden;
     }
-    #bgvideo{
-        display: none;
-    }
-}
 
 /*  jumbotron   */
 .jumbotron{

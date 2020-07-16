@@ -110,14 +110,14 @@ $activationKey = bin2hex(random_bytes(16));
  
 
 //Insert user details and activation code in the users table
-$sql = "INSERT INTO users (username,email,password,activation) VALUES ('$name','$email','$password1','$activationKey')";
+$sql = "INSERT INTO users (username,email,password,activation) VALUES ('$name','$email','$password1','activated')";
 $result = mysqli_query($link,$sql);
 if(!$result){
     echo "<div class='alert alert-danger'>There was an error inserting the users details in the database!</div>";
     exit;
 }
 //Send the user an email with a link to activate.php with their email and activation code
-
+/* I will delete the actication by email cause of the host that i'm using the payment doiesn't work with it 
 // set the variables to the mail()
 $to = $email;
 $subject = "Confirm Your Registratoin";
@@ -130,5 +130,5 @@ if(mail($to,$subject,$message,$SC)){
      echo "<div class='alert alert-danger'>We Couldn't send the mail to your email please try again later!</div>";
     exit;
 }
-
+*/
 ?>

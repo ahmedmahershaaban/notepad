@@ -102,7 +102,7 @@ if($results){
 }
     
 //Create a unique activation code
-$activationKey = bin2hex(random_bytes(16));
+$activationKey = bin2hex(openssl_random_pseudo_bytes(16));
     //byte: unit of data = 8 bits
     //bit : 0 or 1
     //16 bytes = 16*8 = 128 bits

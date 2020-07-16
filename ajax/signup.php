@@ -80,10 +80,9 @@ $sql = "SELECT * FROM users WHERE username = '$name'";
 $result = mysqli_query($link, $sql);
 if(!$result){
      echo '<div class="alert alert-danger">Error running the query!</div>';
-//     exit;
+     exit;
 }
-     echo 'Done the search';
-/*
+
 $results = mysqli_num_rows($result);
 if($results){
     echo '<div class="alert alert-danger">That username is already registered. Do you want to log in?</div>'; 
@@ -118,6 +117,8 @@ if(!$result){
     echo "<div class='alert alert-danger'>There was an error inserting the users details in the database!</div>";
     exit;
 }
+     echo 'inserted successfully';
+/*
 //Send the user an email with a link to activate.php with their email and activation code
 /* I will delete the actication by email cause of the host that i'm using the payment doiesn't work with it 
 // set the variables to the mail()

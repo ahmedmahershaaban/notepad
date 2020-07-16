@@ -82,7 +82,6 @@ if(!$result){
      echo '<div class="alert alert-danger">Error running the query!</div>';
      exit;
 }
-
 $results = mysqli_num_rows($result);
 if($results){
     echo '<div class="alert alert-danger">That username is already registered. Do you want to log in?</div>'; 
@@ -92,7 +91,7 @@ if($results){
 // If the email exist in the users table
 $sql = "SELECT * FROM users WHERE email = '$email'";
 $result = mysqli_query($link,$sql);
-if($result){
+if(!$result){
     echo "<div class='alert alert-danger'>Error running the query!</div>";
     exit;
 }

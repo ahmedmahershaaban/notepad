@@ -30,8 +30,8 @@ $("#SignUpForm").submit(function(event){
     },
     error: function(data){
         
-        $("#signUpMessage").html("<div class='alert alert-danger'>there was an error with the AJAX call. Please try again later.</div>");
-        $("#signUpMessage").html(data);
+      //  $("#signUpMessage").html("<div class='alert alert-danger'>there was an error with the AJAX call. Please try again later.</div>");
+        $("#signUpMessage").html(data.responseText);
         }
     });// Ajax call
 }); // click submit

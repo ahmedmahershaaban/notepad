@@ -6,9 +6,22 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav mr-auto">
-      <a class="nav-item nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="AboutUs.php">About Us</a>
-      <a class="nav-item nav-link" href="ContactUs.php">Contact Us</a>
+      <?php  
+                $current = $_SERVER["PHP_SELF"];
+                if (strpos($current, 'index.php') !== false){
+                    echo '<a class="nav-item nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a>
+                     <a class="nav-item nav-link" href="AboutUs.php">About Us</a>
+      <a class="nav-item nav-link" href="ContactUs.php">Contact Us</a>';
+                }else if(strpos($current, 'AboutUs.php') !== false){
+                    echo '<a class="nav-item nav-link " href="index.php">Home</a>
+                     <a class="nav-item nav-link active" href="AboutUs.php">About Us<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="ContactUs.php">Contact Us</a>';
+                }else{
+                    echo '<a class="nav-item nav-link " href="index.php">Home</a>
+                     <a class="nav-item nav-link " href="AboutUs.php">About Us</a>
+      <a class="nav-item nav-link active" href="ContactUs.php">Contact Us<span class="sr-only">(current)</span></a>';
+                }
+        ?>
     </div>
        <div class=" my-2 mr-2  my-lg-0">
     <button class="btn btn-outline-success my-2 mr-2 my-sm-0" type="submit" id="LoginModelButton" data-toggle="modal" data-target="#LoginModel">Login</button>

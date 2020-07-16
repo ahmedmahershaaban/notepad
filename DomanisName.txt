@@ -1,0 +1,6 @@
+freenote.ml 
+freenote.cf
+freenote.gq
+
+email : ahmed2@ageokfc.com
+pass : Aa102030

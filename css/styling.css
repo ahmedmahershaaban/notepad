@@ -1,0 +1,546 @@
+::root {
+    font-size: 16px;
+    font-family: 'Open Sans';
+    --text-primay: #777777;
+    --text-secondary:#8888888;
+    --bg-primary: #23232e;
+    --bg-secondary: #87879964;
+}
+
+
+.display-1{
+    font-size: 6vw;
+/*        color: red;*/
+
+}
+p{
+  font-size: 2.2vw;
+
+}
+
+/* Video: 
+- set the video as background, make it fixed.
+- make sure it appears behind all elements.
+- make it spread across the whole webpage. */
+#bgvideo{
+    position:  fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translateX(calc((100% - 100vw) / 2));
+    z-index: -100;
+    
+}
+
+
+/* note !!
+Video won't work in small devices:
+-Hide the video and set picture as background (use media queries)
+-make it spread a cross the whole webpage*/
+@media (max-device-width:768px){
+    body{
+        background: url(../images/homebackground.png) center center fixed no-repeat;
+        background-size: cover;
+        overflow-x: hidden;
+    }
+    #bgvideo{
+        display: none;
+    }
+}
+
+/*  jumbotron   */
+.jumbotron{
+    margin-top: 30vh; 
+    text-align: center;
+    background-color: rgba(60, 56, 56, 0.2);
+    color: white;
+    padding: 0.5vh;
+}
+.icons ul {
+    margin: 0 0 10px 0;
+    padding: 0;
+    list-style: none;
+/*    background-color: rgba(42, 42, 42, 0.4);*/
+    display: flex;
+    justify-content: center;
+    
+}
+
+/*icons for Social media About Us*/
+.icons ul li {
+    position: relative;
+    display: block;
+    color: #666;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    background: #101010;
+    line-height: 40px;
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.icons ul li:before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    z-index: -1;
+    transform: scale(0.9);
+    transition: 0.5s;
+
+}
+.icons ul li:nth-child(1):before{
+    background: #4267B2;
+}
+.icons ul li:nth-child(2):before{
+    background: #1DA1F2;
+}
+.icons ul li:nth-child(3):before{
+    background: #E1306C;
+}
+.icons ul li:nth-child(4):before{
+    background: #2867B2;
+}
+.icons ul li:nth-child(5):before{
+    background: #ff0000;
+}
+
+.icons ul li:hover:before{
+    filter: blur(3px);
+    transform: scale(1.2);
+}
+.icons ul li:nth-child(1):hover:before{
+    box-shadow: 0 0 15px #4267B2;
+}
+.icons ul li:nth-child(2):hover:before{
+    box-shadow: 0 0 15px #1DA1F2;
+}
+.icons ul li:nth-child(3):hover:before{
+    box-shadow: 0 0 15px #E1306C;
+}
+.icons ul li:nth-child(4):hover:before{
+    box-shadow: 0 0 15px #2867B2;
+}
+.icons ul li:nth-child(5):hover:before{
+    box-shadow: 0 0 15px #ff0000;
+}
+.icons ul li:nth-child(1):hover{
+    color: #456cba;
+    box-shadow: 0 0 15px #4267B2;
+    text-shadow: 0 0 15px #4267B2;  
+}
+.icons ul li:nth-child(2):hover{
+    color: #26a4f2;
+    box-shadow: 0 0 15px #1DA1F2;
+    text-shadow: 0 0 15px #1DA1F2;  
+}
+.icons ul li:nth-child(3):hover{
+    color: #e23670;
+    box-shadow: 0 0 15px #E1306C;
+    text-shadow: 0 0 15px #E1306C;  
+}
+.icons ul li:nth-child(4):hover{
+    color: #2a6cbb;
+    box-shadow: 0 0 15px #2867B2;
+    text-shadow: 0 0 15px #2867B2;  
+}
+.icons ul li:nth-child(5):hover{
+    color: #ff1a1a;
+    box-shadow: 0 0 15px #ff0000;
+    text-shadow: 0 0 15px #ff0000;  
+}
+
+
+
+/*footer*/
+footer{
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    min-width: 100%;
+    background-color: #343A40;
+    padding: 10px 0 ;
+    color: white;
+}
+.lastItem{
+    height: 70px;
+
+}
+
+@media (min-width: 922px) { 
+
+.display-1{
+    font-size: 5vw;
+}
+p{
+  font-size: 1.3vw;
+
+}
+
+}
+
+/*model*/
+.alert{
+    margin: 0;
+    padding: 0.3em 0.75em;
+}
+.modal-content{
+    background: linear-gradient(#DDDEE2,#FFFFFF) ;
+}
+.modal-body a {
+  color: black;
+}
+.modal-body a:hover {
+  color: green;
+}
+.pointer{
+    cursor: pointer;
+}
+/*About us page*/
+.AboutUsBG{
+    background: url(../images/AboutUsBG.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+/*contact us page*/
+.ContactUsBG {
+    background: url(../images/ContactUSBG.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+.jumbotronContactUS{
+    margin-top: 8vh;
+    margin-bottom: 10vh;
+    
+}
+
+.address{
+    margin: 5px 0 30px 0;
+}
+
+/*My Notes page*/
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+
+.MyNotesBG{
+    background: url(../images/MyNotesBG.jpg) no-repeat center center fixed ;
+    background-size: cover;
+}
+
+.mainDiv{
+/*    border: 1px solid black;*/
+    margin-top: 5vh ;
+    
+}
+
+.textareaPad{
+
+    position: absolute;
+    left: 30px;
+/*    height: 75vh;*/
+/*    width: 95vw;*/
+width: calc(98.5%);
+height: calc(100% - 250px);
+    background-color: transparent;
+    z-index: 5;
+}
+#main{
+        margin: 0px 0px 50px 0px;
+    padding: 0px 0px 20px 0px;
+}
+#area{
+    
+}
+#bar {
+    width: calc(97.2%);
+
+    padding-left: 20px;
+    background-color: #FFFFFF;
+}
+.notes{
+    background-image: linear-gradient(90deg, #d0a090 1px, #d0a090 1px), linear-gradient(#fdf8c8, #fdf8c8 23px, #ccd 23px, #ccd 24px, #fdf8c8 24px);
+    background-size: 2px 100%, 100% 24px;
+    background-position: 40px top, left 0px;
+    background-repeat: no-repeat, repeat;
+    line-height: 24px !important;
+    background-attachment: local;
+}
+textarea {
+    height: 100%;
+    width: 90%;
+    width: calc(100% - 55px);
+    margin: 0;
+    padding-top: 3px;
+    padding-left: 50px;
+    background: #fdf8c8;
+    font-family: verdana;
+    font-family: Arial, Helvetica, Sans-serif;
+    font-size: large;
+    outline: none;
+}
+textarea {
+    resize: vertical;
+}
+textarea:focus {
+    outline-offset: -2px;
+}
+:focus {
+    outline: -webkit-focus-ring-color auto 1px;
+}
+
+/* the buttons */
+.btnX {
+  background: #222;
+  height: 50px;
+  width: 150px;
+  border: none;
+  border-radius: 10px;
+  color: #eee;
+  font-size: 2em;
+  font-family: 'Cookie', cursive;
+  position: relative;
+  transition: 1s;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding-top: 5px;
+}
+
+.btnX .circle {
+  width: 5px;
+  height: 5px;
+  background: transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  overflow: hidden;
+  transition: 500ms;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.btnX:hover {
+  background: transparent;
+    color:#222222;
+    border-top: 2px solid white;
+    border-radius: 0;
+}
+
+.btnX:hover .circle {
+  height: 50px;
+  width: 150px;
+  left: 0;
+  border-radius: 0;
+  border-bottom: 2px solid #eee;
+}   
+/* the delete buttons */
+.btnD {
+  background: #af0b0b;
+  height: 50px;
+  width: 150px;
+  border: none;
+  border-radius: 10px;
+  color: #eee;
+  font-size: 2em;
+  font-family: 'Cookie', cursive;
+  position: relative;
+  transition: 1s;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding-top: 5px;
+}
+
+.btnD .circleD {
+  width: 5px;
+  height: 5px;
+  background: transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  overflow: hidden;
+  transition: 500ms;
+}
+
+.noselectD {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.btnD:hover {
+  background: transparent;
+    color:#af0b0b;
+    border-top: 2px solid #af0b0b;
+    border-radius: 0;
+
+}
+
+.btnD:hover .circleD {
+  height: 50px;
+  width: 150px;
+  left: 0;
+  border-radius: 0;
+  border-bottom: 2px solid #af0b0b;
+}   
+/* spacing between buttons*/
+.btnLine{
+    display: flex;
+     justify-content: space-between;
+    margin-bottom: 20px;
+    
+}
+.noteRowContainer{
+    padding: 3px;
+}
+.noteRow{
+    display: flex;
+    margin-top: 10px;
+    cursor: pointer;
+    
+}
+.note{
+    flex: 1;
+}
+.animatedBox .textWrap {
+      overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+} 
+#delete{
+    margin-top: 8px;
+/*    display: none;*/
+}
+
+/*style of div containing the note */
+.dateOfNote{
+    color: aqua;
+    margin-left: auto;
+    
+}
+.animatedBox {
+  display: flex;
+    flex-wrap: wrap;
+/*  align-items: flex-start;*/
+/*  justify-content: flex-start;*/
+  width: 890px;
+/*  height: 100px;*/
+  color: white;
+  font-family: 'Raleway';
+  font-size: 1.2rem;
+    padding: 5px;
+    margin-right: 10px;
+}
+.animatedBox p {
+    margin: 0;
+    padding: 0;
+}
+.gradient-border {
+  --borderWidth: 3px;
+  background: #1D1F20;
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+.gradient-border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/*profile page*/
+.ProfileBG{
+    background: url(../images/AboutUsBG.jpg) no-repeat center center fixed;
+    background-size: cover;
+
+
+}
+.profile{
+    padding-top: 10vh;
+}
+
+.MainInfo{
+    display: flex;
+    
+   
+}
+.MainInfo img{
+    border-radius: 50%;
+    margin-right: 30px;
+    height: 230px;
+    width: 200px;
+}
+.infoToChange{
+    margin: 30px 0 0 10px;
+}
+.contactInfo{
+    margin-top: 50px;
+}
+.borderShapleft{
+    width: 150px;
+    text-align: center;
+    padding: 10px;
+    margin-right: 30px;
+    border-radius: 10px;
+    background-color: rgba(151, 141, 141,0.4);
+    border-left: 4px solid rgba(151, 141, 141,0.9);
+    border-right: 4px solid rgba(151, 141, 141,0.9);
+
+}
+.borderShapright{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(151, 141, 141,0.4);
+    border-right: 4px solid rgba(151, 141, 141,0.9);
+    border-left: 4px solid rgba(151, 141, 141,0.9);
+    cursor: pointer;
+}
+
+
+.noteRowContainer,#addNewNote{
+/*    display: none;*/
+}
+#main,#done,#deleteNote{
+    display: none;
+}

@@ -100,8 +100,7 @@ if($results){
     echo "<div class='alert alert-danger'>That email is already registered. Do you want to log in?</div>";
     exit;
 }
-     echo 'before insertion';
-     exit;
+    
 //Create a unique activation code
 $activationKey = bin2hex(random_bytes(16));
     //byte: unit of data = 8 bits
@@ -109,7 +108,8 @@ $activationKey = bin2hex(random_bytes(16));
     //16 bytes = 16*8 = 128 bits
     // 1111 0001 -> F1  1byte -> 2hexa     16bytes -> 32 hexa     
  
-
+ echo 'before insertion';
+     exit;
 //Insert user details and activation code in the users table
 $sql = "INSERT INTO users (username,email,password,activation) VALUES ('$name','$email','$password1','activated')";
 $result = mysqli_query($link,$sql);

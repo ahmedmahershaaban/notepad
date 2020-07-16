@@ -118,7 +118,7 @@ if(!$result){
 }
 
 //Send the user an email with a link to activate.php with their email and activation code
- I will delete the actication by email cause of the host that i'm using the payment doiesn't work with it 
+// I will delete the actication by email cause of the host that i'm using the payment doiesn't work with it 
 // set the variables to the mail()
 $to = $email;
 $subject = "Confirm Your Registratoin";

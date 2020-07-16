@@ -116,9 +116,12 @@ if(!$result){
     echo "<div class='alert alert-danger'>There was an error inserting the users details in the database!</div>";
     exit;
 }
+    echo "<div class='alert alert-success'>Thank for your registering! We Confirmed your account Because we can't use mail services now . You can Login now</div>";
+/*
+
+// I will delete the actication by email cause of the host that i'm using the payment doiesn't work with it 
 
 //Send the user an email with a link to activate.php with their email and activation code
-// I will delete the actication by email cause of the host that i'm using the payment doiesn't work with it 
 // set the variables to the mail()
 $to = $email;
 $subject = "Confirm Your Registratoin";
@@ -131,5 +134,5 @@ if(mail($to,$subject,$message,$SC)){
      echo "<div class='alert alert-danger'>We Couldn't send the mail to your email please try again later!</div>";
     exit;
 }
-
+/*
 ?>

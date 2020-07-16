@@ -20,7 +20,7 @@ if(isset($_SESSION['user_id'])){
       <link href="css/styling.css" rel="stylesheet" >
     <title>Free Onilne NotePad</title>
   </head>
-  <body>
+  <body class="homeBG">
 <!--      Video background -->
       <video abindex="-1" autoplay loop muted id="bgvideo">
         <source src="images/background-video.mp4" type="video/mp4">

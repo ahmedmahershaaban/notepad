@@ -4,7 +4,7 @@ session_start();
  
 
 if(isset($_SESSION['user_id'])){
-    header("location: http://localhost/MyNote.php");
+    header("location: http://notepad-github.gearhostpreview.com/MyNote.php");
 }
 
 ?>

@@ -11,7 +11,7 @@ include ('config/rememberMe.php');
 
 if(!isset($_SESSION['user_id'])){
     
-    header("location: http://localhost/index.php");
+    header("location: http://notepad-github.gearhostpreview.com/index.php");
 }
 
 

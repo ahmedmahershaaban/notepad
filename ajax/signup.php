@@ -126,7 +126,7 @@ if(!$result){
 $to = $email;
 $subject = "Confirm Your Registratoin";
 $message = "Please click on this link to activate your account:\n\n";
-$message .= "http://localhost/ajax/activation.php?email=". urlencode($email) . "&key=$activationKey";
+$message .= "http://notepad-github.gearhostpreview.com/ajax/activation.php?email=". urlencode($email) . "&key=$activationKey";
 $SC = "From: Techincal Support Team Of NotePad";
 if(mail($to,$subject,$message,$SC)){
     echo "<div class='alert alert-success'>Thank for your registring! A confirmation email has been sent to $email. Please click on the activation link to activate your account.</div>";

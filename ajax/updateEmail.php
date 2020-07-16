@@ -64,7 +64,7 @@ if(!($result = mysqli_query($link, $sql))){
 $to = $newEmail;
 $subject = "Confirm Your New Email";
 $message = "Please click on this link to Confirm that you has this account:\n\n";
-$message .= "http://localhost/ajax/NewActivationEmail.php?email=". urlencode($newEmail) . "&key=$activationKey";
+$message .= "http://notepad-github.gearhostpreview.com/ajax/NewActivationEmail.php?email=". urlencode($newEmail) . "&key=$activationKey";
 $SC = "From: Techincal Support Team Of NotePad";
 if(mail($to,$subject,$message,$SC)){
     echo "<div class='alert alert-success'> A confirmation email has been sent to $newEmail. Please click on the activation link to Confirm your New Email.</div>";

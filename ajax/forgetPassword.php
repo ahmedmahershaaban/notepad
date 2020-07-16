@@ -66,7 +66,7 @@ if(!$result){
 $to = $email;
 $subject = "Reset Your Password";
 $message = "Please click on this link to reset your password:\n\n";
-$message .= "http://localhost/ajax/ResetPassword.php?email=". urlencode($email) . "&key=$uniqueKey";
+$message .= "http://notepad-github.gearhostpreview.com/ajax/ResetPassword.php?email=". urlencode($email) . "&key=$uniqueKey";
 $SC = "From: Techincal Support Team Of NotePad";
 if(mail($to,$subject,$message,$SC)){
     echo "<div class='alert alert-success'>Please Check your email to Reset your password</div>";

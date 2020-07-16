@@ -55,7 +55,7 @@ $("#LoginForm").submit(function(event){
         data : dataToPost,
         success: function(data){
             if(data === "success"){
-                $(location).attr('href', 'http://localhost/MyNote.php');
+                $(location).attr('href', 'http://notepad-github.gearhostpreview.com/MyNote.php');
             }else{
                 $('#LogInMessage').html(data);
             }

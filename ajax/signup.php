@@ -109,6 +109,7 @@ $activationKey = bin2hex(random_bytes(16));
     //16 bytes = 16*8 = 128 bits
     // 1111 0001 -> F1  1byte -> 2hexa     16bytes -> 32 hexa     
  
+     echo 'before insertion';
 
 //Insert user details and activation code in the users table
 $sql = "INSERT INTO users (username,email,password,activation) VALUES ('$name','$email','$password1','activated')";
@@ -117,7 +118,6 @@ if(!$result){
     echo "<div class='alert alert-danger'>There was an error inserting the users details in the database!</div>";
     exit;
 }
-     echo 'inserted successfully';
 /*
 //Send the user an email with a link to activate.php with their email and activation code
 /* I will delete the actication by email cause of the host that i'm using the payment doiesn't work with it 
